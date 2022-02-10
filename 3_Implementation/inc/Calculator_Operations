@@ -1,0 +1,78 @@
+/** 
+* @file calculator_operations.h
+* Calculator application with 4 mathematical operations
+*
+*/
+
+#ifndef __CALCULATOR_OPERATIONS_H__
+#define __CALCULATOR_OPERATIONS_H__
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+/**
+*  add the n1 and n2 and display result
+* float n1 
+* float n2 
+* @return Result of n1 + n2
+*/
+void add(float n1, float n2)
+
+
+  /**
+* subtract the  n1 and n2 and display result
+* float n1 
+* float n2 
+* @return Result of n1 - n2
+*/
+void subtract(float n1, float n2)
+
+ 
+  /**
+* multiply the n1 and n2 and display result
+* float n1 
+* float n2 
+* @return Result of n1 * n2
+*/
+void multiply(float n1, float n2)
+
+
+  /**
+* divide the n1 and n2 and display result
+* float n1 
+* float n2 
+* @return Result of n1 / n2
+*/
+void divide(float n1, float n2)
+
+
+  /**
+* divide the int n1 and int n2 and display result
+* modulus operator only works on int data type
+* integer n1 
+* integer n2 
+* @return Result of int n1 % int n2
+*/
+void rem(float n1, float n2)
+
+
+   /**
+* let float n2 be the power of float n1 and display result
+* float n1 
+* float n2 
+* @return Result of n1 ^ n2
+*/
+void power(float n1, float n2)
+
+
+ /**
+* percentage of int n1 and int n2 and display result
+* modulus operator only works on int data type
+* integer n1 
+* integer n2 
+* @return Result of int n1 % int n2(modulus)
+*/
+void modulus(float n1, float n2)
+
+    #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
