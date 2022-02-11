@@ -25,3 +25,15 @@ https://api.codiga.io/project/31101/status/svg
 ## Codacy Badge:-
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a39540f32914301b6f66884026b8d60)](https://www.codacy.com/gh/Eniyadharsan/M1_Projectgoal_app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Eniyadharsan/M1_Projectgoal_app&amp;utm_campaign=Badge_Grade)
 
+
+# Folder Structure:-
+
+|FOLDER|DESCRIPTION|
+|:-----|:----------|
+|0_Certificates|Sololearn in c, Linux, Hackerearth|
+|1_Requirements|Description, detailing requirements,SWOT analysis
+|2_Architecture|Behaviour and Structural diagram|
+|3_Implementation|Main code and its function|
+|4_TestPlanAndOutput|HLR and LLR Tables|
+|5_Report|Report of the project|
+
