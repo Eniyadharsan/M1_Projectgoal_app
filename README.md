@@ -1,4 +1,4 @@
-# M1_Projectgoal_APP
+# CALCULATOR
 
 ## Description:-
 
