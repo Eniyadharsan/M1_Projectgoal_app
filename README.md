@@ -21,3 +21,7 @@ https://api.codiga.io/project/31101/status/svg
 
 ![image](https://user-images.githubusercontent.com/59721749/153580503-ea8205b8-b0a7-423a-b8cf-a08d91b6b7fa.png)
 
+
+## Codacy Badge:-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a39540f32914301b6f66884026b8d60)](https://www.codacy.com/gh/Eniyadharsan/M1_Projectgoal_app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Eniyadharsan/M1_Projectgoal_app&amp;utm_campaign=Badge_Grade)
+
