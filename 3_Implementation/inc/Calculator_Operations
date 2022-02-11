@@ -75,4 +75,5 @@ void power(float n1, float n2)
 */
 void modulus(float n1, float n2)
 
+
     #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
