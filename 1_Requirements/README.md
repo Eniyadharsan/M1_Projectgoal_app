@@ -2,7 +2,7 @@
 
 ## Description:-
 
-Simple calculator is a project to allow users to calculate basic four operations in mathematics such as addition, subtraction, multiplication, division but in this which I'm Implementing, also included two additional operations such as power and reminder.
+Simple calculator is a project to allow users to calculate basic four operations in mathematics such as addition, subtraction, multiplication, division but in this simple project, i also included three additional operations such as reminder, power and modulus.
 
 The input includes the command such that we can give numbers based on the operation that we want to perform. For example the operation we needed is addition, we have to enter 1 as a command and that particular operation works.
 
