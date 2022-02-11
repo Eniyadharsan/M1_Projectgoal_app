@@ -1,5 +1,7 @@
 # CALCULATOR
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c3dff815e604c10a94f11e49ff7d297)](https://app.codacy.com/gh/Eniyadharsan/M1_Projectgoal_app?utm_source=github.com&utm_medium=referral&utm_content=Eniyadharsan/M1_Projectgoal_app&utm_campaign=Badge_Grade_Settings)
+
 ## Description:-
 
 Simple calculator is a project to allow users to calculate basic four operations in mathematics such as addition, subtraction, multiplication, division but in this simple project, i also included three additional operations such as reminder, power and modulus.
