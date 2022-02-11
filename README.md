@@ -15,3 +15,9 @@ The switch-case statement is used to write a simple calculator program in C lang
 https://api.codiga.io/project/31101/score/svg
 
 ![image](https://user-images.githubusercontent.com/59721749/153578441-6b3ac073-5ede-4f14-a0a0-4558dead8720.png)
+
+
+https://api.codiga.io/project/31101/status/svg
+
+![image](https://user-images.githubusercontent.com/59721749/153580503-ea8205b8-b0a7-423a-b8cf-a08d91b6b7fa.png)
+
