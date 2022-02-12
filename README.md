@@ -36,4 +36,6 @@ https://api.codiga.io/project/31101/status/svg
 |3_Implementation|Main code and its function|
 |4_TestPlanAndOutput|HLR and LLR Tables|
 |5_Report|Report of the project|
+|6_Images|Image file of the Output Displayed|
+
 
