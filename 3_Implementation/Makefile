@@ -44,7 +44,7 @@ run:$(PROJECT_NAME)
 
 # Document the code using Doxygen
 doc:
-	make -C ./documentation
+	make -C ./Documentation
 
 # Build and run the unit tests
 test:$(BUILD)
