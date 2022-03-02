@@ -1,77 +1,69 @@
-# Name of the project
-PROJECT_NAME = Calculator
+########################################################################
+####################### Makefile Template ##############################
+########################################################################
 
-# Output directory
-BUILD = build
+# Compiler settings - Can be customized.
+CC = g++
+CXXFLAGS = -std=c++11 -Wall
+LDFLAGS = 
 
-# All source code files
-SRC = main.c\
-src/Calculator_Operations.c
+# Makefile settings - Can be customized.
+APPNAME = myapp
+EXT = .cpp
+SRCDIR = src
+OBJDIR = obj
 
-# All test source files
-TEST_SRC = src/Calculator_Operations.c\
-test/test_Calculator_Operations.c\
-unity/unity.c\
+############## Do not change anything from here downwards! #############
+SRC = $(wildcard $(SRCDIR)/*$(EXT))
+OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
+DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
+# UNIX-based OS variables & settings
+RM = rm
+DELOBJ = $(OBJ)
+# Windows OS variables & settings
+DEL = del
+EXE = .exe
+WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+########################################################################
+####################### Targets beginning here #########################
+########################################################################
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+all: $(APPNAME)
 
-#Library Inlcudes
-#INCLUDE_LIBS = 
-INCLUDE_LIBS = -lcunit
+# Builds the app
+$(APPNAME): $(OBJ)
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+# Creates the dependecy rules
+%.d: $(SRCDIR)/%$(EXT)
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-# Document files
-DOCUMENTATION_OUTPUT = Documentation/html
+# Includes all .h files
+-include $(DEP)
 
-# Default target built
-$(PROJECT_NAME):all
+# Building rule for .o files and its .c/.cpp in combination with all .h
+$(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-# Document the code using Doxygen
-doc:
-	make -C ./Documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-analyze: test memcheck staticcheck coverage sanitize_check
-
-staticcheck:
-	cppcheck --enable=all -iunity .
-
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
-
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-coverage:$(TEST_SRC)
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-	gcov -a calculator_operations.c
-
-# Remove all the built files, invoke by `make clean`
+################### Cleaning rules for Unix-based OS ###################
+# Cleans complete project
+.PHONY: clean
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
+	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
 
-# Create new build folder if not present
-$(BUILD):
-	mkdir build
+# Cleans only all files with the extension .d
+.PHONY: cleandep
+cleandep:
+	$(RM) $(DEP)
+
+#################### Cleaning rules for Windows OS #####################
+# Cleans complete project
+.PHONY: cleanw
+cleanw:
+	$(DEL) $(WDELOBJ) $(DEP) $(APPNAME)$(EXE)
+
+# Cleans only all files with the extension .d
+.PHONY: cleandepw
+cleandepw:
+	$(DEL) $(DEP)
