@@ -18,8 +18,8 @@ https://api.codiga.io/project/31101/score/svg
 
 
 https://api.codiga.io/project/31101/status/svg
+![image](https://user-images.githubusercontent.com/59721749/156872350-203b2c3f-b7a9-40c2-b783-3328ee04180c.png)
 
-![image](https://user-images.githubusercontent.com/59721749/153580503-ea8205b8-b0a7-423a-b8cf-a08d91b6b7fa.png)
 
 
 ## Codacy Badge:-
